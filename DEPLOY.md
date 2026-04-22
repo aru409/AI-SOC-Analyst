@@ -9,7 +9,7 @@ This project is prepared to deploy as a single Render web service that serves:
 
 ### What is already configured
 
-- `render.yaml` defines the web service, build command, start command, health check, and a persistent disk for contact submissions.
+- `render.yaml` defines the web service, build command, start command, and health check.
 - `npm start` runs the production Node server.
 - The production server serves both `/api/*` routes and the built React app.
 
@@ -25,11 +25,7 @@ This project is prepared to deploy as a single Render web service that serves:
 
 The contact form currently stores submissions in `data/contact-submissions.json`.
 
-On Render, local filesystem writes are ephemeral by default. This project includes a persistent disk mount at:
-
-`/opt/render/project/src/data`
-
-That keeps contact submissions across restarts and redeploys. This works best for a small demo or MVP. For production lead handling, move submissions to a real database.
+On Render's free web service tier, local filesystem writes are ephemeral. That means contact submissions can be lost whenever the service redeploys, restarts, or spins down. This free setup is fine for demos and portfolio use, but for production lead handling you should move submissions to a real database.
 
 ### After deploy
 
