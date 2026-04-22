@@ -10,10 +10,10 @@ function PlatformOverview() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-        <SectionReveal className="rounded-[30px] border border-slate-200 bg-white/90 p-8">
+        <SectionReveal className="rounded-[30px] border border-white/10 bg-white/5 p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-surge">Platform</p>
-          <h2 className="mt-4 font-display text-3xl font-bold text-ink">A frontline analyst experience built for trust.</h2>
-          <p className="mt-4 leading-8 text-slate-600">
+          <h2 className="mt-4 font-display text-3xl font-bold text-white">A frontline analyst experience built for trust.</h2>
+          <p className="mt-4 leading-8 text-slate-300">
             Every action is grounded in evidence. Analysts can inspect the timeline, reasoning, enrichment data, and
             remediation steps before approving or adapting the response.
           </p>
@@ -21,11 +21,11 @@ function PlatformOverview() {
 
         <div className="grid gap-5 md:grid-cols-3">
           {capabilities.map((item) => (
-            <SectionReveal key={item} className="rounded-[28px] border border-slate-200 bg-panel p-6 transition duration-300 hover:-translate-y-1 hover:border-surge/20">
+            <SectionReveal key={item} className="rounded-[28px] border border-white/10 bg-panel p-6 transition duration-300 hover:-translate-y-1 hover:border-surge/20">
               <div
                 className="mb-5 h-12 w-12 rounded-2xl bg-surge/10 transition duration-300"
               />
-              <p className="text-base leading-7 text-slate-700">{item}</p>
+              <p className="text-base leading-7 text-slate-200">{item}</p>
             </SectionReveal>
           ))}
         </div>

@@ -12,18 +12,18 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const linkClassName = ({ isActive }) =>
-    `transition ${isActive ? 'text-ink' : 'text-slate-600 hover:text-ink'}`
+    `transition ${isActive ? 'text-white' : 'text-slate-300 hover:text-white'}`
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#07182d]/80 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
         <Link to="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-sky-200 bg-white shadow-glow">
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-glow">
             <span className="font-display text-lg font-bold text-surge">S</span>
           </div>
           <div>
             <p className="font-display text-lg font-bold tracking-wide">Sentra AI</p>
-            <p className="text-sm text-slate-500">Autonomous SOC Analyst</p>
+            <p className="text-sm text-slate-400">Autonomous SOC Analyst</p>
           </div>
         </Link>
 
@@ -38,7 +38,7 @@ function Navbar() {
         <div className="hidden lg:block">
           <Link
             to="/contact"
-            className="rounded-full border border-surge/20 bg-surge px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-500"
+            className="rounded-full border border-white/10 bg-white px-5 py-3 text-sm font-semibold text-[#07182d] transition hover:bg-surge hover:text-[#07182d]"
           >
             Book Demo
           </Link>
@@ -47,19 +47,19 @@ function Navbar() {
         <button
           type="button"
           onClick={() => setIsOpen((value) => !value)}
-          className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-ink lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white lg:hidden"
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
         >
           <span className="relative h-4 w-5">
             <span
-              className={`absolute left-0 top-0 h-0.5 w-5 bg-ink transition ${
+              className={`absolute left-0 top-0 h-0.5 w-5 bg-white transition ${
                 isOpen ? 'translate-y-[7px] rotate-45' : ''
               }`}
             />
-            <span className={`absolute left-0 top-[7px] h-0.5 w-5 bg-ink transition ${isOpen ? 'opacity-0' : ''}`} />
+            <span className={`absolute left-0 top-[7px] h-0.5 w-5 bg-white transition ${isOpen ? 'opacity-0' : ''}`} />
             <span
-              className={`absolute left-0 top-[14px] h-0.5 w-5 bg-ink transition ${
+              className={`absolute left-0 top-[14px] h-0.5 w-5 bg-white transition ${
                 isOpen ? '-translate-y-[7px] -rotate-45' : ''
               }`}
             />
@@ -68,11 +68,11 @@ function Navbar() {
       </div>
 
       <div
-        className={`overflow-hidden border-t border-slate-200 transition-[max-height,opacity] duration-300 lg:hidden ${
+        className={`overflow-hidden border-t border-white/10 transition-[max-height,opacity] duration-300 lg:hidden ${
           isOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav className="mx-auto flex max-w-7xl flex-col gap-3 bg-white px-6 py-4 text-sm text-slate-600">
+        <nav className="mx-auto flex max-w-7xl flex-col gap-3 bg-[#0b203d] px-6 py-4 text-sm text-slate-300">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -86,7 +86,7 @@ function Navbar() {
           <Link
             to="/contact"
             onClick={() => setIsOpen(false)}
-            className="mt-2 inline-flex justify-center rounded-full border border-surge/20 bg-surge px-5 py-3 font-semibold text-white"
+            className="mt-2 inline-flex justify-center rounded-full border border-white/10 bg-white px-5 py-3 font-semibold text-[#07182d]"
           >
             Book Demo
           </Link>

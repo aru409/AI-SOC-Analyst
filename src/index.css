@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 html {
@@ -14,8 +14,12 @@ body {
   margin: 0;
   min-width: 320px;
   font-family: 'Manrope', sans-serif;
-  background: #f5fbff;
-  color: #16324f;
+  background: #07182d;
+  color: #f6fbff;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 a {
@@ -42,6 +46,60 @@ a {
 
 .animate-pageEnter {
   animation: pageEnter 600ms ease-out;
+}
+
+.metric-stagger {
+  animation: fadeUp 700ms ease-out both;
+}
+
+.metric-stagger:nth-child(1) {
+  animation-delay: 80ms;
+}
+
+.metric-stagger:nth-child(2) {
+  animation-delay: 180ms;
+}
+
+.metric-stagger:nth-child(3) {
+  animation-delay: 280ms;
+}
+
+.hero-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(143, 211, 255, 0.65), transparent);
+  animation: shimmer 2.8s linear infinite;
+  pointer-events: none;
+}
+
+.dashboard-orb {
+  animation: bob 4.8s ease-in-out infinite;
+}
+
+.dashboard-orb.delay {
+  animation-delay: 1.2s;
+}
+
+.mascot-eye {
+  transform-origin: center;
+  animation: blink 4.6s infinite;
+}
+
+.mascot-hand {
+  transform-origin: 85% 18%;
+  animation: wave 3.2s ease-in-out infinite;
+}
+
+.shield-ring {
+  transform-origin: center;
+  animation: shieldPulse 3.6s ease-in-out infinite;
 }
 
 @keyframes pageEnter {

@@ -29,9 +29,9 @@ function PlatformPage() {
       <section className="mx-auto grid max-w-7xl gap-10 px-6 pb-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
         <SectionReveal className="space-y-5">
           {pillars.map((pillar) => (
-            <div key={pillar.title} className="rounded-[28px] border border-slate-200 bg-white/90 p-7 transition hover:border-surge/30 hover:bg-white">
-              <h2 className="font-display text-2xl font-bold text-ink">{pillar.title}</h2>
-              <p className="mt-3 leading-8 text-slate-600">{pillar.body}</p>
+            <div key={pillar.title} className="rounded-[28px] border border-white/10 bg-white/5 p-7 transition hover:border-surge/30 hover:bg-white/[0.08]">
+              <h2 className="font-display text-2xl font-bold text-white">{pillar.title}</h2>
+              <p className="mt-3 leading-8 text-slate-300">{pillar.body}</p>
             </div>
           ))}
         </SectionReveal>
