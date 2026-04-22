@@ -4,20 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#06131f',
-        surge: '#62ffd2',
-        alert: '#ff7a59',
-        panel: '#0c1c2b',
+        ink: '#16324f',
+        surge: '#1ea7fd',
+        alert: '#ff8b6b',
+        panel: '#eef6fb',
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],
         display: ['Space Grotesk', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(98, 255, 210, 0.16), 0 24px 80px rgba(0, 0, 0, 0.45)',
+        glow: '0 0 0 1px rgba(30, 167, 253, 0.12), 0 24px 80px rgba(22, 50, 79, 0.12)',
       },
       backgroundImage: {
-        grid: 'linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)',
+        grid: 'linear-gradient(rgba(22,50,79,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(22,50,79,0.06) 1px, transparent 1px)',
       },
       animation: {
         float: 'float 7s ease-in-out infinite',

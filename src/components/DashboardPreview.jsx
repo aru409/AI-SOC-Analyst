@@ -44,14 +44,14 @@ function DashboardPreview() {
       <div className="absolute -left-12 top-8 h-28 w-28 rounded-full bg-alert/20 blur-3xl" />
       <div className="absolute -right-8 bottom-12 h-36 w-36 rounded-full bg-surge/20 blur-3xl" />
 
-      <div className="relative rounded-[32px] border border-white/10 bg-white/5 p-4 shadow-glow backdrop-blur-xl transition duration-500 hover:-translate-y-1">
-        <div className="rounded-[28px] border border-white/10 bg-ink p-5">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
+      <div className="relative rounded-[32px] border border-slate-200 bg-white/90 p-4 shadow-glow backdrop-blur-xl transition duration-500 hover:-translate-y-1">
+        <div className="rounded-[28px] border border-sky-100 bg-panel p-5">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
             <div>
-              <p className="text-sm text-slate-400">Live analyst workspace</p>
-              <h2 className="mt-1 text-xl font-semibold">{view.label}</h2>
+              <p className="text-sm text-slate-500">Live analyst workspace</p>
+              <h2 className="mt-1 text-xl font-semibold text-ink">{view.label}</h2>
             </div>
-            <div className="rounded-full border border-surge/20 bg-surge/10 px-3 py-1 text-xs font-semibold text-surge">
+            <div className="rounded-full border border-surge/20 bg-white px-3 py-1 text-xs font-semibold text-surge">
               {view.badge}
             </div>
           </div>
@@ -63,7 +63,7 @@ function DashboardPreview() {
                 type="button"
                 onClick={() => setActiveTab(tab)}
                 className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                  activeTab === tab ? 'bg-white text-slate-950' : 'bg-white/5 text-slate-300 hover:bg-white/10'
+                  activeTab === tab ? 'bg-surge text-white' : 'bg-white text-slate-600 hover:bg-sky-50 hover:text-ink'
                 }`}
               >
                 {views[tab].label}
@@ -73,29 +73,29 @@ function DashboardPreview() {
 
           <div className="mt-5 space-y-4">
             {view.cards.map((item) => (
-              <div key={item.title} className="group rounded-2xl border border-white/8 bg-white/5 p-4 transition hover:border-white/20 hover:bg-white/[0.08]">
+              <div key={item.title} className="group rounded-2xl border border-slate-200 bg-white p-4 transition hover:border-sky-200 hover:bg-sky-50/60">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-sm text-slate-400">{item.source}</p>
-                    <p className="mt-1 font-semibold text-white">{item.title}</p>
+                    <p className="text-sm text-slate-500">{item.source}</p>
+                    <p className="mt-1 font-semibold text-ink">{item.title}</p>
                   </div>
-                  <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-slate-200">
+                  <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
                     {item.severity}
                   </span>
                 </div>
-                <div className="mt-4 h-2 rounded-full bg-white/5">
+                <div className="mt-4 h-2 rounded-full bg-slate-100">
                   <div className={`h-2 rounded-full bg-gradient-to-r ${view.accent} transition-all duration-700`} style={{ width: item.width }} />
                 </div>
-                <p className="mt-3 text-sm text-slate-300 transition group-hover:text-white">{item.action}</p>
+                <p className="mt-3 text-sm text-slate-600 transition group-hover:text-ink">{item.action}</p>
               </div>
             ))}
           </div>
 
           <div className="mt-5 grid gap-4 sm:grid-cols-3">
             {view.stats.map((item) => (
-              <div key={item.label} className="rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-surge/30 hover:bg-white/[0.08]">
+              <div key={item.label} className="rounded-2xl border border-slate-200 bg-white p-4 transition hover:border-surge/30 hover:bg-sky-50">
                 <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{item.label}</p>
-                <p className="mt-2 text-2xl font-bold text-white">{item.value}</p>
+                <p className="mt-2 text-2xl font-bold text-ink">{item.value}</p>
               </div>
             ))}
           </div>

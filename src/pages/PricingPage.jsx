@@ -13,10 +13,10 @@ function PricingPage() {
       />
       <PricingSection />
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-10">
-        <SectionReveal className="rounded-[32px] border border-white/10 bg-white/5 p-8 text-center">
+        <SectionReveal className="rounded-[32px] border border-slate-200 bg-white/90 p-8 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-surge">Procurement friendly</p>
-          <h2 className="mt-4 font-display text-3xl font-bold text-white">Need a pilot, annual contract, or private deployment?</h2>
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-slate-300">
+          <h2 className="mt-4 font-display text-3xl font-bold text-ink">Need a pilot, annual contract, or private deployment?</h2>
+          <p className="mx-auto mt-4 max-w-2xl leading-8 text-slate-600">
             We can structure deployment and pricing around regulated workloads, custom integrations, or proof-of-value milestones.
           </p>
         </SectionReveal>
